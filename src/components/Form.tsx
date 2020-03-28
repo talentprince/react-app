@@ -13,10 +13,6 @@ interface FormState {
 }
 
 export class Form extends React.Component<FormPros, FormState> {
-    constructor(props: FormPros) {
-        super(props);
-    }
-
     private onChange(id: string, value: string) {
         this.setState({[id] :value})
     }

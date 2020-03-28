@@ -6,11 +6,7 @@ export interface InputFieldProps {
     onChange: (id: string, value: string) => void;
 }
 export class InputField extends React.Component<InputFieldProps> {
-    constructor(props: InputFieldProps) {
-        super(props);
-    }
-
-    handleChange(e: ChangeEvent<HTMLInputElement>) {
+    private handleChange(e: ChangeEvent<HTMLInputElement>) {
         this.props.onChange(e.target.id, e.target.value)
     }
 
