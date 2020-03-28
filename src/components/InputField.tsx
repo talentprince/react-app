@@ -1,4 +1,5 @@
 import React, { ChangeEvent } from 'react';
+import './InputField.css'
 
 export interface InputFieldProps {
     label: string;
@@ -15,7 +16,7 @@ export class InputField extends React.Component<InputFieldProps> {
 
     public render() {
         return <div>
-            <label> {this.props.label} </label>
+            <label className="Label"> {this.props.label} </label>
             <input type='text' id={this.props.label} onChange={this.handleChange.bind(this)}/>
         </div>
     }
