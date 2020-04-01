@@ -13,6 +13,11 @@ interface FormState {
 }
 
 export class Form extends React.Component<FormPros, FormState> {
+    constructor(props: FormPros) {
+        super(props);
+        this.state = {}
+    }
+
     private onChange(id: string, value: string) {
         this.setState({[id] :value})
     }
@@ -23,8 +28,8 @@ export class Form extends React.Component<FormPros, FormState> {
     }
 
     public render() {
-        const inputFields = this.props.formLabels.map((label, index) =>
-            <InputField onChange={this.onChange.bind(this)} label={label} />
+        const inputFields = this.props.formLabels.map((label) =>
+            <InputField onChange={this.onChange.bind(this)} label={label} value={this.state[label]}/>
         );
         return <form onSubmit={this.onSubmit.bind(this)}>
             {inputFields}
