@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+![CI](https://github.com/talentprince/react-app/workflows/CI/badge.svg)
+
 ## Available Scripts
 
 In the project directory, you can run:
