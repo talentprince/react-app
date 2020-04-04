@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Form } from "./components/Form"
+import { Form } from "./container/Form"
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
       <header >
         <p>Chen Chen</p>
       </header>
-      <Form submitLabel='Sumit' formLabels={['Name', 'Password']} onSubmit={(body: string) => alert(body)} />
+      <Form onSubmit={(body: string) => alert(body)} />
     </div>
   );
 }

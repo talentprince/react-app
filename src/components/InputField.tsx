@@ -1,5 +1,5 @@
 import React, { ChangeEvent } from 'react';
-import './InputField.css'
+import './Label.css'
 
 export interface InputFieldProps {
     label: string;
@@ -7,14 +7,14 @@ export interface InputFieldProps {
     onChange: (id: string, value: string) => void;
 }
 export class InputField extends React.Component<InputFieldProps> {
-    private handleChange(e: ChangeEvent<HTMLInputElement>) {
+    private handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         this.props.onChange(e.target.id, e.target.value)
     }
 
     public render() {
         return <div>
             <label className="Label"> {this.props.label} </label>
-            <input type='text' id={this.props.label} onChange={this.handleChange.bind(this)} value={this.props.value}/>
+            <input type='text' id={this.props.label} onChange={this.handleChange} value={this.props.value} />
         </div>
     }
 }
