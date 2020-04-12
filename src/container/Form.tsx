@@ -3,6 +3,7 @@ import { Button } from "../components/Button"
 import { Select } from "../components/Select"
 import { MultiSelect } from "../components/MultiSelect"
 import React from "react";
+import { Radio } from "../components/Radio";
 
 interface FormPros {
     onSubmit: (body: string) => void;
@@ -39,10 +40,12 @@ export class Form extends React.Component<FormPros, FormState> {
         const inputFields = ["Name", "Password"].map((label) =>
             <InputField onChange={this.onChange} label={label} value={this.state[label]}/>
         );
+        const radioLable = "Gender"
         const selectLabel = "Cert type"
         const multiLabel = "Role"
         return <form onSubmit={this.onSubmit}>
             {inputFields}
+            <Radio label={radioLable} selected={this.state[radioLable]} options={["Male", "Female"]} onChanged={this.onChange}/>
             <Select label={selectLabel} selected={this.state[selectLabel]} options={["SMS", "Token", "Token+SMS"]} onChanged={this.onChange}/>
             <MultiSelect label={multiLabel} selected={this.parseMultiSelected()} options={["Read", "Write"]} onChanged={this.onChange}/>
             <Button text="Submit"/>

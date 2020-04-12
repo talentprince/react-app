@@ -6,8 +6,8 @@ interface ButtonProps {
 
 export class Button extends React.Component<ButtonProps> {
     public render() {
-        return <div>
+        return <>
             <input type='submit' value={this.props.text}/>
-        </div>
+        </>
     }
 }

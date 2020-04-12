@@ -81,7 +81,7 @@ class MultiOptions extends React.Component<MultiOptionsPors>  {
                 {options}
             </div>
         } else {
-            return <div />
+            return <></>
         }
     }
 }
