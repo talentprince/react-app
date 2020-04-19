@@ -62,15 +62,15 @@ class MultiOptions extends React.Component<MultiOptionsPors>  {
 
     public render() {
         if (this.props.dropDownVisibale) {
-            const options = this.props.options.map((option) => {
+            const options = this.props.options.map((option, index) => {
                 if (this.props.selected.indexOf(option) > -1)
-                    return <div>
+                    return <div key={index}>
                         <label>
                             <input type="checkbox" id={option.toLowerCase()} value={option} onChange={this.handleChange} checked />{option}
                         </label>
                     </div>
                 else
-                    return <div>
+                    return <div key={index}>
                         <label>
                             <input type="checkbox" id={option.toLowerCase()} value={option} onChange={this.handleChange} />{option}
                         </label>

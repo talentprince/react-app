@@ -15,8 +15,8 @@ export class Select extends React.Component<SelectPors> {
     }
 
     public render() {
-        const options = this.props.options.map((option) =>
-            <option value={option.toLowerCase()}>{option}</option>
+        const options = this.props.options.map((option, index) =>
+            <option key={index} value={option.toLowerCase()}>{option}</option>
         );
         return <div>
             <label className="Label">{this.props.label}</label>

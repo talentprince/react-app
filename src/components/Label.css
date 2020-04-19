@@ -4,3 +4,10 @@
     text-align: right;
     margin-right: 10px;
 }
+
+.Error {
+    display: inline-block;
+    color: red;
+    text-align: right;
+    font-size: 12px;
+}
